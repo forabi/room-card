@@ -19,6 +19,7 @@ export interface RoomCardEntity {
     attribute?: string;
     show_state?: boolean;
     styles?: EntityStyles | RoomCardAttributeTemplate;
+    state_styles?: EntityStyles | RoomCardAttributeTemplate;
     icon?: string | RoomCardIcon;
     template?: string;
 }
@@ -52,7 +53,7 @@ export interface RoomCardConfig extends LovelaceCardConfig {
 export enum RoomCardAlignment {
     Left = 'left',
     Center = 'center',
-    Right = 'right'
+    Right = 'right',
 }
 
 export interface RoomCardRow {
