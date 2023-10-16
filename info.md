@@ -1,6 +1,10 @@
 {% if installed %}
 
 ### Features
+{% if version_installed.replace("v", "").replace(".","") | int < 10800  %}
+- Fixed `Changed loading of cards to await dependencies`
+{% endif %}
+
 {% if version_installed.replace("v", "").replace(".","") | int < 10725  %}
 - Fixed `broken card creation`
 {% endif %}
